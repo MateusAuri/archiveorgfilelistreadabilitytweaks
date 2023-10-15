@@ -1,0 +1,31 @@
+/* ==UserStyle==
+@name         archive.org - file download list readability tweaks
+@version      20231015.02.43
+@description  A few simple tweaks to improve readability on archive.org file download lists.
+@author       MateusAuri
+@namespace    ?
+==/UserStyle== */
+
+@-moz-document url-prefix("https://archive.org/download/") {
+	/* full width */
+	.container {
+		margin-left: 0px;
+		margin-right: 0px;
+		max-width: 100%;
+	}
+	/* add padding to facilitate text selection */
+	table td:nth-child(1) {
+		padding-left: 25px;
+	}
+	/* align filesizes to the right */
+	table td:nth-child(3) {
+		text-align: end;
+	}
+	/* alternate row colors for readability */
+	table tr:nth-child(even) {
+		background-color: #ded;
+	}
+	table tr:nth-child(odd) {
+		background-color: #fff;
+	}
+}
